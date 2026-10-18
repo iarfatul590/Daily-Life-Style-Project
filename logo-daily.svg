@@ -1,0 +1,20 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f9e7a8"/>
+      <stop offset="18%" stop-color="#f0d27d"/>
+      <stop offset="42%" stop-color="#d7a94c"/>
+      <stop offset="66%" stop-color="#f6d98a"/>
+      <stop offset="100%" stop-color="#b67b2a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="250" cy="250" r="220" fill="#080808" stroke="url(#gold)" stroke-width="8"/>
+  <circle cx="250" cy="250" r="210" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.75"/>
+  <path d="M155 166c26-38 71-48 118-18c17 12 28 29 30 49c3 24-8 40-24 49c-7 4-14 6-18 10c-14 15-13 34-1 47c14 15 41 23 69 13c11-4 26-12 33-20" fill="none" stroke="url(#gold)" stroke-width="14" stroke-linecap="round"/>
+  <text x="250" y="225" text-anchor="middle" font-size="170" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="url(#gold)" letter-spacing="-18">D</text>
+  <path d="M120 270c38-18 94-12 130 12c28 19 45 52 58 86" fill="none" stroke="url(#gold)" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <text x="250" y="332" text-anchor="middle" font-size="76" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="url(#gold)" letter-spacing="-4">DAILY</text>
+  <path d="M120 355h260" stroke="url(#gold)" stroke-width="2.5" opacity="0.75"/>
+  <text x="250" y="395" text-anchor="middle" font-size="28" font-family="Arial, sans-serif" font-weight="700" fill="url(#gold)" letter-spacing="10">LIFE STYLE</text>
+  <path d="M135 430c40-33 96-18 120 12c12 15 17 37 30 43c27 13 60-9 77-26" fill="none" stroke="url(#gold)" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+</svg>
