@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Daily lifestyle is a modern clothing and lifestyle brand offering premium essentials for everyday confidence."
+    />
+    <title>Daily lifestyle | Modern Clothing & Lifestyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <p>Free shipping on orders over ৳2,500 • New season arrivals now live</p>
+        <div class="topbar-meta">
+          <span>Track Order</span>
+          <span>Support</span>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container nav-wrap">
+        <div class="logo" aria-label="Daily lifestyle logo">
+          <img src="assets/logo-daily.svg" alt="Daily lifestyle logo" class="logo-image" />
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#">Home</a>
+          <a href="#shop">Shop</a>
+          <a href="#collections">Collections</a>
+          <a href="#new-arrivals">New In</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions" aria-label="Actions">
+          <button class="icon-button search-toggle" aria-label="Search">⌕</button>
+          <button class="icon-button wishlist-toggle" aria-label="Wishlist">
+            ♡
+            <span class="wishlist-count">0</span>
+          </button>
+          <button class="icon-button cart-button" aria-label="Cart">
+            🛒
+            <span class="cart-count">3</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="search-modal hidden" id="search-modal" aria-hidden="true">
+        <div class="search-backdrop" data-close-search></div>
+        <div class="search-panel">
+          <div class="search-header">
+            <h3>Search products</h3>
+            <button class="close-modal" data-close-search aria-label="Close search">×</button>
+          </div>
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search by product, category, or style..." />
+          </div>
+          <div class="search-results" id="search-results"></div>
+        </div>
+      </div>
+
+      <div class="modal hidden" id="quick-view-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-quick-view></div>
+        <div class="modal-panel product-quick-view">
+          <button class="close-modal" data-close-quick-view aria-label="Close quick view">×</button>
+          <div class="quick-view-content" id="quick-view-content"></div>
+        </div>
+      </div>
+
+      <div class="modal hidden" id="member-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-member></div>
+        <div class="modal-panel small-modal">
+          <button class="close-modal" data-close-member aria-label="Close member modal">×</button>
+          <h3>Member bonus unlocked</h3>
+          <p>Use code <strong>MEMBER40</strong> at checkout for 40% off selected styles.</p>
+          <button class="btn btn-primary copy-code-btn">Copy code</button>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div class="hero-slider">
+          <button class="slider-control prev" aria-label="Previous slide">‹</button>
+
+          <div class="slides">
+            <article class="slide active" style="--slide-bg: url('assets/6922ad70-5edf-4d0b-ba5f-702c039a12dc.jfif');">
+              <div class="container slide-content">
+                <div class="slide-copy">
+                  <span class="eyebrow">Spring / Summer 2026</span>
+                  <h1>Refresh your everyday essentials.</h1>
+                  <p>
+                    Discover elevated basics, statement pieces, and effortless silhouettes for every part of your day.
+                  </p>
+                  <div class="cta-row">
+                    <a href="#shop" class="btn btn-primary">Shop Now</a>
+                    <a href="#collections" class="btn btn-secondary">Browse Collection</a>
+                  </div>
+                  <ul class="hero-stats">
+                    <li><strong>12k+</strong><span>Happy Shoppers</span></li>
+                    <li><strong>4.9/5</strong><span>Customer Rating</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide" style="--slide-bg: url('assets/0cb32b6c-5610-4960-abc0-0ec987611770.jfif');">
+              <div class="container slide-content">
+                <div class="slide-copy">
+                  <span class="eyebrow">Minimal layers</span>
+                  <h1>Designed for comfort, style, and movement.</h1>
+                  <p>
+                    Premium fabrics and polished fits that move seamlessly from workdays to weekend moments.
+                  </p>
+                  <div class="cta-row">
+                    <a href="#shop" class="btn btn-primary">Shop Now</a>
+                    <a href="#new-arrivals" class="btn btn-secondary">See New Arrivals</a>
+                  </div>
+                  <ul class="hero-stats">
+                    <li><strong>48h</strong><span>Dispatch Window</span></li>
+                    <li><strong>COD</strong><span>Available Nationwide</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide" style="--slide-bg: url('assets/23aa0451-4fb2-4d2c-bbee-53c54292e9c9.jfif');">
+              <div class="container slide-content">
+                <div class="slide-copy">
+                  <span class="eyebrow">Limited drop</span>
+                  <h1>Curated statement pieces for elevated living.</h1>
+                  <p>
+                    Discover trending silhouettes in versatile tones, crafted to elevate your daily lifestyle.
+                  </p>
+                  <div class="cta-row">
+                    <a href="#shop" class="btn btn-primary">Shop Now</a>
+                    <a href="#collections" class="btn btn-secondary">Explore Looks</a>
+                  </div>
+                  <ul class="hero-stats">
+                    <li><strong>500+</strong><span>New Styles</span></li>
+                    <li><strong>30%</strong><span>Member Discounts</span></li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="slider-control next" aria-label="Next slide">›</button>
+        </div>
+
+        <div class="slider-dots" aria-label="Slide navigation">
+          <button class="dot active" aria-label="Slide 1"></button>
+          <button class="dot" aria-label="Slide 2"></button>
+          <button class="dot" aria-label="Slide 3"></button>
+        </div>
+      </section>
+
+      <section class="section container" id="collections">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-dark">Shop by collection</p>
+          <h2>Curated for every mood and moment</h2>
+        </div>
+
+        <div class="category-grid">
+          <article class="category-card large" style="--card-bg: url('assets/13d516a2-a041-4941-8fe4-33fbb6ef0f06.jfif');">
+            <div class="overlay"></div>
+            <div class="category-content">
+              <span>Women's Collection</span>
+              <h3>Modern silhouettes</h3>
+            </div>
+          </article>
+
+          <article class="category-card" style="--card-bg: url('assets/2c984edb-0434-4266-a85e-e3881322e408.jfif');">
+            <div class="overlay"></div>
+            <div class="category-content">
+              <span>Men's Wear</span>
+              <h3>Minimal essentials</h3>
+            </div>
+          </article>
+
+          <article class="category-card" style="--card-bg: url('assets/6922ad70-5edf-4d0b-ba5f-702c039a12dc.jfif');">
+            <div class="overlay"></div>
+            <div class="category-content">
+              <span>Abaya / Hijab</span>
+              <h3>Graceful layering</h3>
+            </div>
+          </article>
+
+          <article class="category-card" style="--card-bg: url('assets/35dfa5ab-cc4f-4fdc-be51-57a333e93584.jfif');">
+            <div class="overlay"></div>
+            <div class="category-content">
+              <span>Sharee</span>
+              <h3>Heritage textures</h3>
+            </div>
+          </article>
+
+          <article class="category-card" style="--card-bg: url('assets/0cb32b6c-5610-4960-abc0-0ec987611770.jfif');">
+            <div class="overlay"></div>
+            <div class="category-content">
+              <span>Casual Wear</span>
+              <h3>Everyday comfort</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="promise-band">
+        <div class="container promise-grid">
+          <div>
+            <span class="promise-icon">🚚</span>
+            <div>
+              <h4>Fast delivery</h4>
+              <p>Same-day dispatch in Dhaka</p>
+            </div>
+          </div>
+          <div>
+            <span class="promise-icon">🔒</span>
+            <div>
+              <h4>Secure checkout</h4>
+              <p>bKash, Nagad, cards & COD</p>
+            </div>
+          </div>
+          <div>
+            <span class="promise-icon">↩️</span>
+            <div>
+              <h4>Easy returns</h4>
+              <p>7-day exchange window</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="new-arrivals">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow eyebrow-dark">Featured picks</p>
+            <h2>Shop our top releases</h2>
+          </div>
+
+          <div class="tab-buttons" role="tablist" aria-label="Featured product tabs">
+            <button class="tab-btn active" data-tab="new" role="tab" aria-selected="true">New Arrivals</button>
+            <button class="tab-btn" data-tab="best" role="tab" aria-selected="false">Best Sellers</button>
+            <button class="tab-btn" data-tab="offer" role="tab" aria-selected="false">Special Offers</button>
+          </div>
+        </div>
+
+        <div class="tab-panel active" data-panel="new">
+          <div class="product-grid">
+            <article class="product-card" data-id="1" data-name="Soft Knit Blazer" data-category="Women's Collection" data-price="3490">
+              <div class="product-image" style="background-image: url('assets/13d516a2-a041-4941-8fe4-33fbb6ef0f06.jfif');">
+                <span class="badge badge-sale">-25%</span>
+                <button class="wishlist" data-product="1" aria-label="Add to wishlist">♡</button>
+                <button class="quick-view-btn" data-product="1">Quick View</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Women's</span>
+                  <span class="rating">★ 4.9</span>
+                </div>
+                <h3>Soft Knit Blazer</h3>
+                <div class="price-row">
+                  <span class="price">৳3,490</span>
+                  <span class="old-price">৳4,690</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="2" data-name="Urban Everyday Shirt" data-category="Men's Wear" data-price="2980">
+              <div class="product-image" style="background-image: url('assets/2c984edb-0434-4266-a85e-e3881322e408.jfif');">
+                <span class="badge badge-new">New</span>
+                <button class="wishlist" data-product="2" aria-label="Add to wishlist">♡</button>
+                <button class="quick-view-btn" data-product="2">Quick View</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Men's</span>
+                  <span class="rating">★ 4.8</span>
+                </div>
+                <h3>Urban Everyday Shirt</h3>
+                <div class="price-row">
+                  <span class="price">৳2,980</span>
+                  <span class="old-price">৳3,690</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="3" data-name="Silk Flow Abaya" data-category="Abaya / Hijab" data-price="4890">
+              <div class="product-image" style="background-image: url('assets/35dfa5ab-cc4f-4fdc-be51-57a333e93584.jfif');">
+                <span class="badge badge-hot">Hot</span>
+                <button class="wishlist" data-product="3" aria-label="Add to wishlist">♡</button>
+                <button class="quick-view-btn" data-product="3">Quick View</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Abaya</span>
+                  <span class="rating">★ 5.0</span>
+                </div>
+                <h3>Silk Flow Abaya</h3>
+                <div class="price-row">
+                  <span class="price">৳4,890</span>
+                  <span class="old-price">৳6,090</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="4" data-name="Weekend Linen Set" data-category="Casual Wear" data-price="3240">
+              <div class="product-image" style="background-image: url('assets/0cb32b6c-5610-4960-abc0-0ec987611770.jfif');">
+                <span class="badge badge-sale">-20%</span>
+                <button class="wishlist" data-product="4" aria-label="Add to wishlist">♡</button>
+                <button class="quick-view-btn" data-product="4">Quick View</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Casual</span>
+                  <span class="rating">★ 4.7</span>
+                </div>
+                <h3>Weekend Linen Set</h3>
+                <div class="price-row">
+                  <span class="price">৳3,240</span>
+                  <span class="old-price">৳4,050</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="best">
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/23aa0451-4fb2-4d2c-bbee-53c54292e9c9.jfif');">
+                <span class="badge badge-sale">-18%</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Trending</span>
+                  <span class="rating">★ 4.9</span>
+                </div>
+                <h3>City Luxe Trench</h3>
+                <div class="price-row">
+                  <span class="price">৳5,290</span>
+                  <span class="old-price">৳6,490</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/6922ad70-5edf-4d0b-ba5f-702c039a12dc.jfif');">
+                <span class="badge badge-hot">Best</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Signature</span>
+                  <span class="rating">★ 5.0</span>
+                </div>
+                <h3>Premium Cotton Set</h3>
+                <div class="price-row">
+                  <span class="price">৳3,880</span>
+                  <span class="old-price">৳4,980</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/0cb32b6c-5610-4960-abc0-0ec987611770.jfif');">
+                <span class="badge badge-new">Bestseller</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Essentials</span>
+                  <span class="rating">★ 4.8</span>
+                </div>
+                <h3>Relaxed Layered Knit</h3>
+                <div class="price-row">
+                  <span class="price">৳2,690</span>
+                  <span class="old-price">৳3,200</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/35dfa5ab-cc4f-4fdc-be51-57a333e93584.jfif');">
+                <span class="badge badge-stock">Only 2 left</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Hijab</span>
+                  <span class="rating">★ 4.9</span>
+                </div>
+                <h3>Chiffon Grace Scarf</h3>
+                <div class="price-row">
+                  <span class="price">৳1,540</span>
+                  <span class="old-price">৳1,990</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="offer">
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/13d516a2-a041-4941-8fe4-33fbb6ef0f06.jfif');">
+                <span class="badge badge-sale">Flash sale</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Limited</span>
+                  <span class="rating">★ 4.6</span>
+                </div>
+                <h3>Monochrome Essentials</h3>
+                <div class="price-row">
+                  <span class="price">৳2,390</span>
+                  <span class="old-price">৳3,890</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/2c984edb-0434-4266-a85e-e3881322e408.jfif');">
+                <span class="badge badge-sale">-30%</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Classic</span>
+                  <span class="rating">★ 4.7</span>
+                </div>
+                <h3>Tailored Campus Shirt</h3>
+                <div class="price-row">
+                  <span class="price">৳2,760</span>
+                  <span class="old-price">৳3,970</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/23aa0451-4fb2-4d2c-bbee-53c54292e9c9.jfif');">
+                <span class="badge badge-sale">Bundle</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Bundle</span>
+                  <span class="rating">★ 4.9</span>
+                </div>
+                <h3>Dress + Layer Set</h3>
+                <div class="price-row">
+                  <span class="price">৳4,650</span>
+                  <span class="old-price">৳6,540</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image" style="background-image: url('assets/0cb32b6c-5610-4960-abc0-0ec987611770.jfif');">
+                <span class="badge badge-sale">Weekend deal</span>
+                <button class="wishlist" aria-label="Add to wishlist">♡</button>
+              </div>
+              <div class="product-body">
+                <div class="product-meta">
+                  <span class="tag">Smart</span>
+                  <span class="rating">★ 4.8</span>
+                </div>
+                <h3>Elevated Loungewear</h3>
+                <div class="price-row">
+                  <span class="price">৳2,990</span>
+                  <span class="old-price">৳3,890</span>
+                </div>
+                <button class="add-cart">Add to cart</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container sale-banner">
+        <div class="sale-copy">
+          <p class="eyebrow eyebrow-dark">Member savings</p>
+          <h2>Save up to 40% on curated essentials.</h2>
+          <p>Unlock exclusive pricing, early access drops, and reward points with every order.</p>
+        </div>
+        <button class="btn btn-primary member-cta" type="button">Join Now</button>
+      </section>
+
+      <section class="section container reviews" id="reviews">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-dark">Customer love</p>
+          <h2>What our customers are saying</h2>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="review-top">
+              <div class="avatar" style="background-image:url('assets/39254e82-ee16-49ad-802e-961d1c2d5d10.jfif');"></div>
+              <div>
+                <strong>Farhana R.</strong>
+                <span>Dhaka</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>“The fabric quality feels premium, and the fit was exactly what I wanted. The order arrived faster than expected.”</p>
+            <div class="review-photo" style="background-image:url('assets/13d516a2-a041-4941-8fe4-33fbb6ef0f06.jfif');"></div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="avatar" style="background-image:url('assets/7ef2ea9d-e0f6-4fad-9fbc-2d76d9d8ed01.jfif');"></div>
+              <div>
+                <strong>Imran H.</strong>
+                <span>Chattogram</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>“Very clean design, super comfortable outfit, and the customer service was genuinely thoughtful.”</p>
+            <div class="review-photo" style="background-image:url('assets/2c984edb-0434-4266-a85e-e3881322e408.jfif');"></div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <div class="avatar" style="background-image:url('assets/925f4798-09b1-4c2b-9067-c31a7fcff83a.jfif');"></div>
+              <div>
+                <strong>Samia N.</strong>
+                <span>Khulna</span>
+              </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>“The styling and finish exceeded my expectations, especially for everyday workwear. Highly recommended.”</p>
+            <div class="review-photo" style="background-image:url('assets/39254e82-ee16-49ad-802e-961d1c2d5d10.jfif');"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container instagram">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow eyebrow-dark">Instagram feed</p>
+            <h2>#DailyLifestyle</h2>
+          </div>
+          <a href="#" class="text-link">Follow us</a>
+        </div>
+
+        <div class="instagram-grid">
+          <div class="insta-card" style="background-image: url('assets/6922ad70-5edf-4d0b-ba5f-702c039a12dc.jfif');"></div>
+          <div class="insta-card" style="background-image: url('assets/0cb32b6c-5610-4960-abc0-0ec987611770.jfif');"></div>
+          <div class="insta-card" style="background-image: url('assets/35dfa5ab-cc4f-4fdc-be51-57a333e93584.jfif');"></div>
+          <div class="insta-card" style="background-image: url('assets/23aa0451-4fb2-4d2c-bbee-53c54292e9c9.jfif');"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="brand brand-footer">
+            <div class="logo footer-logo">
+              <img src="assets/logo-daily.svg" alt="Daily lifestyle logo" class="logo-image" />
+            </div>
+          </div>
+          <p>
+            Styling the everyday with intelligent essentials, premium fabrics, and expressive confidence.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="WhatsApp">w</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return & Refund</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Newsletter</h4>
+          <form class="newsletter">
+            <input type="email" placeholder="Your email address" aria-label="Email address" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <div class="payment-methods">
+            <span>bKash</span>
+            <span>Nagad</span>
+            <span>Rocket</span>
+            <span>Visa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p>© 2026 Daily lifestyle. All rights reserved.</p>
+          <p>Made for modern daily living.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="floating-chat" aria-label="Customer support">
+      <button class="chat-toggle" type="button" aria-expanded="false">Chat</button>
+      <div class="chat-menu">
+        <a href="#" class="chat-btn whatsapp">WhatsApp</a>
+        <a href="#" class="chat-btn messenger">Messenger</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
